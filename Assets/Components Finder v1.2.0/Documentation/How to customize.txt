@@ -1,0 +1,59 @@
+Components Finder - Documentation - How to customize
+Author : Pierre Stempin
+Donations are accepted
+Support contact : pierre.stempin@gmail.com
+
+---
+
+How to customize :
+
+You can fully customize this tool to you convenience. 
+All the scripts of this tool are accessible, there is no .dll file, no SDK.
+
+You can move the root folder of this tool anywhere you want in your project. 
+You can also re-organize the hierarchy inside the tool folders, 
+but keep inside the "Editor" folder or his sub-folders the scripts 
+that are already inside the "Editor" folder or his sub-folders (else it can bug or prevent you to build your project).
+
+Here's the main things I think you could be interested to customize : 
+
+- Change the shortcut to the 'Components Finder' window :
+	In the "ComponentsFinder_Window" script, 
+	(path : Components Finder -> Scripts -> Editor -> Window)
+	change the string "shortcutName" to your shortcut.
+
+- Change the shortcut to the 'Find Instances In Scene' button :
+	In the "SceneInstancesFinder" script, 
+	(path : Components Finder -> Scripts -> Editor -> Find Instances In Scene)
+	change the string "shortcutName" to your shortcut.
+
+- Change the "Find " string displayed before the component name in the corresponding button :
+	In the "ButtonCreator" script,
+	(path : Components Finder -> Scripts -> Editor -> Window), 
+	remove the "ComponentsFinderStrings.Find_ +" of the gUIText string,
+
+	or
+
+	In the "ComponentsFinderStrings" script,
+	(path : Components Finder -> Scripts -> Strings),
+	change the "Find" string content to your content.
+
+- Change the Components Finder window minimal Size:
+	In the "WindowValues" script, 
+	(path : Components Finder -> Scripts -> Editor -> Window)
+	change the "MinHeight" value and the "MinLength" value.
+
+- Add your own component cateogries :
+	Updates will be normally planned for each Unity components change in future releases 
+	(new components, obsolete components removed or changes in the hierarchy of the component menu).
+
+	But if it's not the case, you can still add your own components category.
+	You can do it all from scratch but I recommand you to re-use the template scripts in the folder : 
+	Components Finder -> Scripts -> Editor -> Create Categories -> Template.
+	You need to use one script for the category and one script for each sub category.
+
+	You can duplicate the template scripts and rename them 
+	(be sure that the classes has the same name that the scripts name).
+
+	Then call the "CreateCategory ()" method of your script in the "ComponentsFinder_RefreshWindow" script 
+	inside the "CreateCategories ()" method. There is already a disabled example for the template scripts you can enable.

@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd8fcfd3024c507a8930b26dc09b738, type: 3}
+  m_Name: GameConfigs
+  m_EditorClassIdentifier: 
+  bets:
+  - title: Novice
+    betPrice: 1000
+    distance: 3000
+    playerCount: 3356
+    worldId: 0
+  - title: New Lot
+    betPrice: 2000
+    distance: 4000
+    playerCount: 2178
+    worldId: 0
+  - title: Starter
+    betPrice: 5000
+    distance: 5000
+    playerCount: 1980
+    worldId: 1
+  - title: Pro Racer
+    betPrice: 10000
+    distance: 7000
+    playerCount: 1102
+    worldId: 1
+  - title: Da Racer
+    betPrice: 20000
+    distance: 10000
+    playerCount: 0
+    worldId: 1
+  - title: Master
+    betPrice: 50000
+    distance: 10000
+    playerCount: 768
+    worldId: 2
+  worldInfo:
+  - worldName: Desert World
+    coinsNeededToUnlock: 0
+    worldIcon: {fileID: 21300000, guid: 2f06f20ae6ad70f448f6dc6497baa414, type: 3}
+    skyboxMat: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+    inGameMusic: {fileID: 8300000, guid: 302e3f54552e40c7b9181af080bbddcb, type: 3}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 1789887158016826313, guid: b3481310e53046ca8838784206f77aa0, type: 3}
+        - {fileID: 1789887158016826313, guid: 1c8d2f677a7d4514acc46a3944e54ec8, type: 3}
+      - trackStartID: 1
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 1789887158016826311, guid: 3992c4f3d1764e738eb1379ec67cdfb1, type: 3}
+        - {fileID: 1789887158016826313, guid: 9bc9891e49b144b98b0ab18aa03cee31, type: 3}
+      stageConfiguration:
+      - ambientIdList: 0000000001000000
+        minDurationInMeters: 600
+        maxDurationInMeters: 800
+        minSingleAmbientDurationInMeters: 200
+        maxSingleAmbientDurationInMeters: 400
+  - worldName: Green World
+    coinsNeededToUnlock: 0
+    worldIcon: {fileID: 21300000, guid: 0930eacfb3aea9241b209f3393a8a68d, type: 3}
+    skyboxMat: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+    inGameMusic: {fileID: 8300000, guid: 302e3f54552e40c7b9181af080bbddcb, type: 3}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 1789887158016826313, guid: 7918709b5433437f8c7af1921a856e1b, type: 3}
+      - trackStartID: 1
+        startBlock: {fileID: 1789887158016826359, guid: 7c7385d408f6433cbde60602ad86d70f,
+          type: 3}
+        endBlock: {fileID: 1789887158016826359, guid: 7c7385d408f6433cbde60602ad86d70f,
+          type: 3}
+        blocks:
+        - {fileID: 1789887158016826319, guid: 5ea6107d2a914617b229760e5ff67cf7, type: 3}
+      - trackStartID: 2
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 1789887158016826314, guid: af2093214dcd45d6826d97d2a7ed61a4, type: 3}
+        - {fileID: 1789887158016826312, guid: 9f6fb74a6c93471eb13ad17d782cc68d, type: 3}
+        - {fileID: 1789887158016826335, guid: 5cbe3156f0b04610b04ed6d2f3b52b9b, type: 3}
+      stageConfiguration:
+      - ambientIdList: 00000000
+        minDurationInMeters: 600
+        maxDurationInMeters: 800
+        minSingleAmbientDurationInMeters: 200
+        maxSingleAmbientDurationInMeters: 400
+      - ambientIdList: 01000000
+        minDurationInMeters: 400
+        maxDurationInMeters: 800
+        minSingleAmbientDurationInMeters: 500
+        maxSingleAmbientDurationInMeters: 1000
+      - ambientIdList: 02000000
+        minDurationInMeters: 600
+        maxDurationInMeters: 800
+        minSingleAmbientDurationInMeters: 200
+        maxSingleAmbientDurationInMeters: 400
+  - worldName: Winter World
+    coinsNeededToUnlock: 0
+    worldIcon: {fileID: 21300000, guid: d0082129c6219284580321bfcbcad26d, type: 3}
+    skyboxMat: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+    inGameMusic: {fileID: 8300000, guid: a8046843f31941b8961844e2fa223bc1, type: 3}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 1789887158016826321, guid: 9450266d179a424eb809ec276188a487, type: 3}
+        - {fileID: 1789887158016826314, guid: 4036bbbe5c694965a61c470e6b574f2f, type: 3}
+      stageConfiguration:
+      - ambientIdList: 00000000
+        minDurationInMeters: 50000
+        maxDurationInMeters: 60000
+        minSingleAmbientDurationInMeters: 2000
+        maxSingleAmbientDurationInMeters: 3000
+  - worldName: 'New World '
+    coinsNeededToUnlock: 1000
+    worldIcon: {fileID: 0}
+    skyboxMat: {fileID: 0}
+    inGameMusic: {fileID: 0}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 0}
+      stageConfiguration:
+      - ambientIdList: 00000000
+        minDurationInMeters: 50000
+        maxDurationInMeters: 60000
+        minSingleAmbientDurationInMeters: 2000
+        maxSingleAmbientDurationInMeters: 3000
+  - worldName: 'New World '
+    coinsNeededToUnlock: 1000
+    worldIcon: {fileID: 0}
+    skyboxMat: {fileID: 0}
+    inGameMusic: {fileID: 0}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 0}
+      stageConfiguration:
+      - ambientIdList: 00000000
+        minDurationInMeters: 50000
+        maxDurationInMeters: 60000
+        minSingleAmbientDurationInMeters: 2000
+        maxSingleAmbientDurationInMeters: 3000
+  - worldName: 'New World '
+    coinsNeededToUnlock: 1000
+    worldIcon: {fileID: 0}
+    skyboxMat: {fileID: 0}
+    inGameMusic: {fileID: 0}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 0}
+      stageConfiguration:
+      - ambientIdList: 00000000
+        minDurationInMeters: 50000
+        maxDurationInMeters: 60000
+        minSingleAmbientDurationInMeters: 2000
+        maxSingleAmbientDurationInMeters: 3000
+  - worldName: 'New World '
+    coinsNeededToUnlock: 1000
+    worldIcon: {fileID: 0}
+    skyboxMat: {fileID: 0}
+    inGameMusic: {fileID: 0}
+    trackInfo:
+      worldBlockID: 0
+      trackDataList:
+      - trackStartID: 0
+        startBlock: {fileID: 0}
+        endBlock: {fileID: 0}
+        blocks:
+        - {fileID: 0}
+      stageConfiguration:
+      - ambientIdList: 00000000
+        minDurationInMeters: 50000
+        maxDurationInMeters: 60000
+        minSingleAmbientDurationInMeters: 2000
+        maxSingleAmbientDurationInMeters: 3000
+  iapItems:
+  - icon: {fileID: 21300000, guid: ac767d24e05d4730b53ea1347aaf799e, type: 3}
+    id: com.curio.coinpack1
+    priceLocal: $0.99
+    coins: 5000
+  dailyRewardPrices: e8030000b80b0000581b0000e02e0000
+  useAds: 1
+  useIAP: 1
+  useGPGC: 0
+  useFb: 0

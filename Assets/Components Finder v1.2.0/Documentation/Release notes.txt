@@ -1,0 +1,43 @@
+Components Finder - Documentation - Release notes
+Author : Pierre Stempin
+Donations are accepted
+Support contact : pierre.stempin@gmail.com
+
+---
+
+v1.2.0 :
+	New feature :
+	- Added a 'Find Instances In Scene' button quickly accessible by right-clicking when you select a script file in the project window, its shortcut is [Shift + Alt + F].
+
+	Other changes :
+	- Tiny refactoring in scripts 
+	- Tiny changes in folders organization
+	- Tiny changes in documentation
+---
+
+v1.1.0 :
+	New features :
+	- Added a "Favorites" category to make this tool easier to customize
+	- The tool is now also compatible with Unity 2017.3 new components.
+	- Added a "Others" category with "Collider (3D)" "Collider2D" components
+	- Harmonized the height of buttons
+
+	Other changes :
+	- Huge refactoring in scripts
+	- Changed the category template script
+	- The documentation is now split in different text files, instead of only one 
+	(Features description, How to customize, How to use and Release notes)
+
+	Known issues : 
+	- The icon of the favorite components in the finder window disappears at play 
+	(and doesn't reappear after, unless you remove and reset it from favorites)
+---
+
+v1.0.1 :
+	- The Components Finder window keyboard shortcut changed from [Shift + F] to [Alt + F] to avoid possible interferences with typing.
+	- The tool is now also compatible with Unity 2017.2 new components.
+	- Small window display mismatch fixed : the Analytics category is now upper than the Script category (since Unity 5.5), 
+	in order to follow exactly the default unity components category order.
+---
+
+v1.0.0 - Initial release - 2017

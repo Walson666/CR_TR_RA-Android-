@@ -1,0 +1,39 @@
+Components Finder - Documentation - How to use
+Author : Pierre Stempin
+Donations are accepted
+Support contact : pierre.stempin@gmail.com
+
+---
+
+Components Finder is a tool to find easily and quickly what gameObjects in your Scene have a specified component on it.
+Thank you for downloading this tool, I hope you'll enjoy using it. :)
+
+---
+
+How to use : 
+
+- Open the Components Finder window : 
+	Window -> Components Finder (or use [Shift + F] shortcut with the keyboard).
+
+- Find gameObjects in a scene with a speficic component :
+	Once the Components Finder window is opened, find the button corresponding to the component you want to search, and just click on it.
+	For example, if you want to find all the gameObjects with a Rigidbody, click on the button "Find Rigidbody" which is in the "Physics (3D)" category.
+
+	For the rest, it acts like a search in the search bar in the Hierarchy window.
+	The scene will be filtered to display only gameObjects that have the speficic component on it. 
+
+	To cancel the search, click on the cross button that appeared inside the search bar of the hierarchy window.
+	
+	If you created a new script (renamed one, changed its namespace or its possibility to be added on an object) 
+	and you doesn't see it the window, just click inside the window to refresh it (close and re-open the window also works)
+	and it will normally appears (in the "Scripts" category, inside a category named after the script namespace.
+
+- Add or remove a component as favorite
+	To add a component into favorites, click on the button with a "star" icon on it, at the left of the component button.
+	To remove it from favorites, click again on the "star" button you've just clicked, or click on the linked "star" button in the favorites component.
+
+- Find script instances in a scene
+	When you have selected a script file in the project window :
+		Right-click on it -> Find Instances In Scene 
+		GameObject -> Find Instances In Scene 
+		(or use [Shift + Alt + F] shortcut with the keyboard).

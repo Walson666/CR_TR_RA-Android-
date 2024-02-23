@@ -1,0 +1,51 @@
+Components Finder - Documentation - Features description
+Author : Pierre Stempin
+Donations are accepted
+Support contact : pierre.stempin@gmail.com
+
+---
+
+Components Finder is a tool to find easily and quickly what gameObjects in your Scene have a specified component on it.
+Thank you for downloading this tool, I hope you'll enjoy using it. :)
+
+---
+
+Features :
+
+- Find every Unity default components : 
+	This tool works for the different default components in Unity. 
+	The list of components you can find with this tool depends of the Unity version you are currently using.
+
+	Exception : Find a Network Manager doesn't work, 
+	so I removed the button (not my fault, even the manual search doesn't work)
+
+- Find scripts you have created : 
+	All the scripts you can instantiate are added to the Scripts category of the Components Finder window. 
+	They are sorted by their namespaces in this window.
+
+- Add as favorites the components you use to find with this tool to access the linked button quicker
+	There is a "Favorites" category where you can add or remove the components you want in one click.
+	This category is displayed at the top of the window, so it's easier to access it quickly.
+
+- Fold / fold out component categories (with save) : 
+	You can fold or fold out every component category of your choices, to show 
+	or hide components that you're used or not used to looking for. 
+	Each fold / fold out is save in the EditorPrefs, so when you close and re-open Unity, 
+	your fold / fold out will be saved.
+
+- Same component categories as Unity :
+	There is a lot of different components in Unity. 
+	That's why in the Component Menu in Unity, components are separated in differents categories. 
+	This tool does the same thing for its window, 
+	and re-uses the same different categories and the same display order as the Component Menu in Unity, 
+	so you don't have to change your habits.
+
+- Displays the component icon : 
+	For most components, the component icon is displayed on the corresponding button icon, in order to allow you 
+	to find faster the component you're looking for.
+	The suffix '(3D)' is added to each component of the 'Physics' component category to be more clear and natural 
+	that the component is not a 'Physics 2D' component.
+
+- Find quickly scripts instances in scene :
+	When you select a script file in the project window, you can now access to a
+	'Find Instances In Scene' to find all the script instances in the current scene.

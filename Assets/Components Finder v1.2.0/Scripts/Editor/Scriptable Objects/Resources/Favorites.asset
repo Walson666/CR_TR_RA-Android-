@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a805984d5890fd64db12fb5953ea7e12, type: 3}
+  m_Name: Favorites
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:ComponentsFinder:Favorites
+  FavoritesComponentInfosList: []
+  UserScriptsComponentInfosList:
+  - ScriptName: NewBehaviourScriptA
+    DisplayedName: New Behaviour Script A
+    Adds3D: 0
+    AddsASpace: 0
+    IsFavorite: 0
+  - ScriptName: ABCD
+    DisplayedName: ABCD
+    Adds3D: 0
+    AddsASpace: 0
+    IsFavorite: 0
+  - ScriptName: NewBehaviourScript
+    DisplayedName: New Behaviour Script
+    Adds3D: 0
+    AddsASpace: 0
+    IsFavorite: 0
