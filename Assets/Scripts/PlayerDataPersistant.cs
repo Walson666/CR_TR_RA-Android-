@@ -365,7 +365,7 @@ public class PlayerDataPersistant
 		//PlayerPrefs.SetInt("SPIN_TICKETS", this.TicketSpin);
 		//PlayerPrefs.Save();
 		string data = JsonUtility.ToJson(PlayerData);
-		Debug.Log("Saving value:" + data);
+		//Debug.Log("Saving value:" + data);
 		/*if(GP_Player.IsLoggedIn())
 		{
             GP_Player.Set("PLAYERDATA", data);

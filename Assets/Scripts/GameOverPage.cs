@@ -136,7 +136,8 @@ public class GameOverPage : MonoBehaviour
 		if (quit)
 		{
 			Singleton<UIManager>.Instance.QuitFromGame();
-		}
+            rewardManager.ShowInterstitialAd();
+        }
 		else
 		{
             if (Singleton<TimeManager>.Instance.MasterSource.IsPaused)
@@ -187,4 +188,6 @@ public class GameOverPage : MonoBehaviour
 	private int totalScore;
 
 	public const int SAVE_ME_COST = 500;
+
+	public RewardManager rewardManager;
 }

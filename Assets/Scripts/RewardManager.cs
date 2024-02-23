@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CAS;
+using CAS.AdObject;
 //using YG;
 
 public class RewardManager : MonoBehaviour
@@ -8,69 +10,44 @@ public class RewardManager : MonoBehaviour
     public PopupsMan popupsMan;
     private bool musicLastState;
 
+    public InterstitialAdObject InterstitialAdObject;
+    public RewardedAdObject RewardedAdObject;
+
+    string _key;
 
     private void OnEnable()
     {
-        //GP_Payments.OnFetchPlayerPurchases += OnFetchPlayerPurchases;
-        //GP_Payments.OnFetchProductsError += OnFetchProductsError;
+        RewardedAdObject.OnReward.AddListener(OnReward);
     }
-    //Отписка от событий
     private void OnDisable()
     {
-        //GP_Payments.OnFetchPlayerPurchases -= OnFetchPlayerPurchases;
-        //GP_Payments.OnFetchProductsError -= OnFetchProductsError;
+        RewardedAdObject.OnReward.RemoveListener(OnReward);
     }
-
-    //public void Fetch() => GP_Payments.Fetch();
-
-    // Ошибки при получении
-    private void OnFetchProductsError() => Debug.Log("FETCH PRODUCTS: ERROR");
-
-    /*private void OnFetchPlayerPurchases(List<FetchPlayerPurchases> purcahses)
-    {
-        for (int i = 0; i < purcahses.Count; i++)
-        {
-            //Debug.LogError("PLAYER PURCHASES: PRODUCT TAG: " + purcahses[i].tag);
-            //Debug.LogError("PLAYER PURCHASES: PRODUCT ID: " + purcahses[i].productId);
-            //Debug.LogError("PLAYER PURCHASES: PAYLOAD: " + purcahses[i].payload);
-            //Debug.LogError("PLAYER PURCHASES: CREATED AT: " + purcahses[i].createdAt);
-            //Debug.LogError("PLAYER PURCHASES: EXPIRED AT: " + purcahses[i].expiredAt);
-            //Debug.LogError("PLAYER PURCHASES: GIFT: " + purcahses[i].gift);
-            //Debug.LogError("PLAYER PURCHASES: SUBSCRIBED: " + purcahses[i].subscribed);
-            PlayerDataPersistant.Instance.Coins += 5000;
-            Consume();
-        }
-        PlayerDataPersistant.Instance.SaveGameData(true);
-    }*/
 
     public void ShowRewarded(string key)  
     {
-        //GP_Ads.IsRewardedAvailable();
-        //GP_Ads.ShowRewarded(key, OnRewardedReward, OnRewardedStart, OnRewardedClose);
+        RewardedAdObject.Present();
+        _key = key;
     }
 
-
-    private void Start()
+    public void ShowInterstitialAd()
     {
-        //Fetch();
+        InterstitialAdObject.Present();
     }
 
-
-    // Начался показ
-    private void OnRewardedStart()
+    public void OnReward()
     {
-        StopMusic();
-        Debug.Log($"Balance before Ad:{PlayerDataPersistant.Instance.Coins}");
+        Debug.Log("The user earned the reward.");
+        OnkeyRewarded(_key);
     }
-    // Получена награда
-    private void OnRewardedReward(string value)
+    private void OnkeyRewarded(string value)
     {
         if (value == "COINS")
         {
             PlayerDataPersistant.Instance.Coins += 500;
             popupsMan.OnClickBack();
-            Debug.Log("ON REWARDED + 500 Coins");
-            Debug.Log($"Balance After Ad:{PlayerDataPersistant.Instance.Coins}");
+            //Debug.Log("ON REWARDED + 500 Coins");
+            //Debug.Log($"Balance After Ad:{PlayerDataPersistant.Instance.Coins}");
         }
             
 
@@ -78,8 +55,12 @@ public class RewardManager : MonoBehaviour
             Singleton<UIManager>.Instance.inGamePage.RessurectPlayer();
     }
 
-    // Закончился показ
-    private void OnRewardedClose(bool success)
+    private void OnStartAd()
+    {
+        StopMusic();
+    }
+
+    public void OnEndAds()
     {
         ReturnMusicState();
     }
@@ -100,10 +81,6 @@ public class RewardManager : MonoBehaviour
         }
     }
 
-
-    //public void ShowFullscreen() => GP_Ads.ShowFullscreen(OnFullscreenStart, OnFullscreenClose);
-
-    // Начался показ
     private void OnFullscreenStart()
     {
 
@@ -116,31 +93,4 @@ public class RewardManager : MonoBehaviour
     } 
 
 
-    
-
-    //public void Purchase() => GP_Payments.Purchase("GOLD5000", OnPurchaseSuccess, OnPurchaseError);
-
-    // Успешная покупка
-    private void OnPurchaseSuccess(string productIdOrTag)
-    {
-        Debug.LogError("PURCHASE: SUCCESS: " + productIdOrTag);
-        PlayerDataPersistant.Instance.Coins += 5000;
-        PlayerDataPersistant.Instance.SaveGameData(true);
-        //Consume();
-        popupsMan.OnClickBack();
-    }
-    // Ошибка если покупка не удалась
-    private void OnPurchaseError() => Debug.Log("PURCHASE: ERROR");
-
-
-    //public void Consume() => GP_Payments.Consume("GOLD5000", OnConsumeSuccess, OnConsumeError);
-
-    // Успешно использована
-    private void OnConsumeSuccess(string productIdOrTag)
-    {
-        Debug.LogError("CONSUME: SUCCESS: " + productIdOrTag);
-
-    }
-    // Ошибка при использовании
-    private void OnConsumeError() => Debug.LogError("CONSUME: ERROR");
 }

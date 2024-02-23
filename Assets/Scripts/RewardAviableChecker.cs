@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using CAS;
+using CAS.AdObject;
 
 public class RewardAviableChecker : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class RewardAviableChecker : MonoBehaviour
     Button button;
     [SerializeField]
     Text adsNotLoaded;
+
+    RewardedAdObject rewardedAd;
 
     private void OnEnable()
     {
@@ -22,8 +26,8 @@ public class RewardAviableChecker : MonoBehaviour
             button.interactable = false;
             adsNotLoaded.gameObject.SetActive(true);
         }*/
-        button.interactable = false;
-        adsNotLoaded.gameObject.SetActive(true);
+        button.interactable = true;
+        adsNotLoaded.gameObject.SetActive(false);
     }
 
 
